@@ -8,16 +8,16 @@ The code in this repository allows processing of LC-OzID-MS and LC-OzID-MS/MS fi
 Data associated to this publication (Raw data of LC-OzID-MS and LC-OzID-MS/MS files and Skyline transition lists. These transition lists require Skyline version 21.1.0.278.) are available via:
 https://researchdatafinder.qut.edu.au/display/n25697
 
-IMPORTANT: Skyline (64-bit), version 21.1.0.278 was used for the analysis of the data in the associated publication. To use OzFAD, install Skyline, Visual Studio Code, python and download the zip file of this repository (<> Code - Download ZIP), unpack it and place it the folder OzFAD1.3 with all its contents in your main personal folder location.
+IMPORTANT: Skyline (64-bit), version 21.1.0.278 was used for the analysis of the data in the associated publication. To use OzFAD, install Skyline, Visual Studio Code, python and download the zip file of this repository (<> Code - Download ZIP), unpack it and place it the folder OzFAD1.3 with all its contents in your main personal folder location. Please note for first-time installation of Skyline: Open the template.sky file, load the settings file 2021_09_15_SKYLINE_DE_NOVO_SETTINGS.skys from the folder location OzFAD1_black_box and save the settings; load an example transition list and an example dataset (associated to the Nat.Commun. paper) and if requested by Skyline, enter the lockmass (neg) as 556.2771 (LeuEnk) with a mass tolerance of 0.5. Load the report template skyline_report_vpw15.skyr from OzFAD1_black_box in the report interface of Skyline to export a first example report. If all this works, proceed to use the pipeline.
 
 For installation and usage of python: 
 1) Check, if multiple python versions exist (in cmd: "python --version")
 2) Uninstall all python version except the latest one (this one needs to be added to PATH, if unsure, uninstall and reinstall, adding python to PATH during installation).
 3) If required, open folder OzFAD1.3 in VS Code.
-4) Use pip to install packages, where required. To install pandas, type "pip install pandas" in terminal. To install PIL, type "pip install pillow".
+4) Use pip to install packages, where required. To install pandas, type "pip install pandas" in terminal. To install PIL, type "pip install pillow". Note: If installation of packages with pip is problematic, anaconda may be easier to use compared to the original python.
 5) Run OzFAD1v3_GUI_7.py from VS Code or directly from the OzFAD1.3 folder.
 
-NOTE: The latest versions of Skyline should be compatible with this workflow. Skyline Daily may be incompatible. To download version 21.1.0.278 of Skyline, go to the Skyline MS website > release installation page for your system architecture (here 64-bit) > follow link for unplugged installer > "I Agree" > "Archive" link below the "Download" link > Skyline (64-bit) 21.1.0.278. (try https://skyline.ms/labkey/_webdav/home/software/Skyline/%40files/installers/Skyline-64_21_1_0_278.zip)
+NOTE: The latest versions of Skyline are currently not compatible with this workflow, work is in progress to ensure compatibility. Skyline Daily may be incompatible. To download version 21.1.0.278 of Skyline, go to the Skyline MS website > release installation page for your system architecture (here 64-bit) > follow link for unplugged installer > "I Agree" > "Archive" link below the "Download" link > Skyline (64-bit) 21.1.0.278. (try https://skyline.ms/labkey/_webdav/home/software/Skyline/%40files/installers/Skyline-64_21_1_0_278.zip)
 
 If any problems with getting started with the OzFAD workflow remain or occur during data analysis, please contact me via ResearchGate, LinkedIn or E-mail.
 https://www.researchgate.net/publication/364795613_OzFAD_Ozone-enabled_fatty_acid_discovery_reveals_unexpected_diversity_in_the_human_lipidome >> Jan Philipp Menzel
@@ -25,6 +25,8 @@ https://au.linkedin.com/in/jan-philipp-menzel-b09455b7
 
 
 Latest updates to the workflow or this repository:
+
+2025_08_29: Work is ongoing to fix compatibility issues with the latest Skyline version and the OzFAD workflow. Please use Skyline (64-bit), version 21.1.0.278 until further notice and whenever the workflow produces unexpected errors. 
 
 2023_09_21: Updated transition lists compatible with newer Skyline versions can be found in the folder Testing_files.
 
