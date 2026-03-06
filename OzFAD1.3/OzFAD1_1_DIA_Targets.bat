@@ -30,7 +30,7 @@ rem "C:\Users\menzel2\AppData\Local\Programs\Python\Python39\python.exe" "%~dp0\
 
 SETLOCAL
 set ROOT_ANALYSIS_DIR=%~dp0
-set SKYLINE_RUNNER="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\SkylineRunner.exe"
+set SKYLINE_RUNNER="%ProgramFiles%\Skyline\SkylineCmd.exe"
 set BAT_Script_Precheck="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_Precheck.bat"
 set BAT_Script_Precursor="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_Precursor.bat"
 set BAT_Script_Full="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_Full.bat"
