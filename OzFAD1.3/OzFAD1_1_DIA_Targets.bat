@@ -37,7 +37,7 @@ set BAT_Script_Full="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_Full.
 set BAT_Script_First_Filter="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_First_Filter.bat"
 set BAT_Script_Second_Filter="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_Second_Filter.bat"
 set LOG="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\workflow_log_files\Import.log"
-FOR /F %%A IN ('WMIC OS GET LocalDateTime ^| FINDSTR \.') DO @SET DT=%%A
+FOR /F %%A IN ('powershell -Command "(Get-WmiObject -ClassName Win32_OperatingSystem).LocalDateTime" ^| FINDSTR \.') DO @SET DT=%%A
 set LOG_ROLLOVER="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\workflow_log_files\Import_%DT:~0,8%_%DT:~8,6%.log"
 
 if exist %LOG% move %LOG% %LOG_ROLLOVER%

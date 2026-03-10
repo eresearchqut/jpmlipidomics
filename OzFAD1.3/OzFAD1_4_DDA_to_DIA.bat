@@ -25,7 +25,7 @@ set BAT_Script_DDA_DIA_rt_shift1="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_A
 set BAT_Script_DDA_Summarize="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_DDA_summarize.bat"
 set BAT_Script_DDA_Summarize2="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\Skyline_Analysis_DDA_summarize2.bat"
 set LOG="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\workflow_log_files\Import.log"
-FOR /F %%A IN ('WMIC OS GET LocalDateTime ^| FINDSTR \.') DO @SET DT=%%A
+FOR /F %%A IN ('powershell -Command "(Get-WmiObject -ClassName Win32_OperatingSystem).LocalDateTime" ^| FINDSTR \.') DO @SET DT=%%A
 set LOG_ROLLOVER="%ROOT_ANALYSIS_DIR%\OzFAD1_black_box\workflow_log_files\Import_%DT:~0,8%_%DT:~8,6%.log"
 
 if exist %LOG% move %LOG% %LOG_ROLLOVER%
